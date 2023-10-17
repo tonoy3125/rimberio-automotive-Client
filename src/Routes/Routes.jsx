@@ -4,6 +4,8 @@ import {
 import Root from "../Layout/Root";
 import ErrorElement from "../Layout/ErrorElement";
 import Home from "../Pages/Home/Home";
+import AddProduct from "../Pages/AddProduct/AddProduct";
+import MyCart from "../Pages/MyCart/MyCart";
 
 
 const router = createBrowserRouter([
@@ -15,6 +17,14 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>
+            },
+            {
+                path: "/addproduct",
+                element: <AddProduct></AddProduct>
+            },
+            {
+                path: "/mycart",
+                element: <MyCart></MyCart>
             }
         ]
     },
