@@ -6,6 +6,7 @@ import ErrorElement from "../Layout/ErrorElement";
 import Home from "../Pages/Home/Home";
 import AddProduct from "../Pages/AddProduct/AddProduct";
 import MyCart from "../Pages/MyCart/MyCart";
+import Login from "../Pages/Login/Login";
 
 
 const router = createBrowserRouter([
@@ -25,7 +26,11 @@ const router = createBrowserRouter([
             {
                 path: "/mycart",
                 element: <MyCart></MyCart>
-            }
+            },
+            {
+                path: "/login",
+                element: <Login></Login>
+            },
         ]
     },
 ]);
