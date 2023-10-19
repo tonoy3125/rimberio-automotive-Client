@@ -1,12 +1,15 @@
+/* eslint-disable react/prop-types */
+
+import { Link } from "react-router-dom";
 
 
 const Brand = ({ brand }) => {
-    const { _id, brandName, image } = brand;
+    const { brandName, image } = brand;
     return (
         <div>
-            <div className="card card-compact bg-base-100 shadow-xl">
-                <figure><img className="rounded-b-xl" src={image} alt="Shoes" /></figure>
-                <h1 className="text-5xl font-bold text-center mb-10 mt-5">{brandName}</h1> 
+            <div className="card card-compact bg-[#04153B] shadow-xl">
+                <figure><img className="rounded-b-xl" src={image} alt="brand" /></figure>
+                <Link to={`/brand/${brandName}`}><h1 className="text-3xl lg:text-5xl font-bold text-center text-white mb-10 mt-5">{brandName}</h1></Link>
             </div>
         </div>
     );
