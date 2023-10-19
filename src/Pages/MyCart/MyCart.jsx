@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Cartdetails from "./Cartdetails";
+import Footer from "../Footer/Footer";
 
 
 const MyCart = () => {
@@ -21,11 +22,12 @@ const MyCart = () => {
 
     return (
         <div>
-            <div className="grid grid-cols-1 md:grid-cols-2 container mx-auto gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 container mx-auto gap-5 min-h-screen mt-10 px-2 lg:px-0">
                 {
                     carts.map(cart => <Cartdetails key={cart._id} cart={cart}></Cartdetails>)
                 }
             </div>
+            <Footer></Footer>
         </div>
     );
 };
