@@ -1,15 +1,34 @@
 import { useLoaderData } from "react-router-dom";
 import Footer from "../Footer/Footer";
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 
 const ProductDetails = () => {
+    const { user } = useContext(AuthContext)
     const products = useLoaderData();
     const [newProduct] = products
     const { brandName, image, name, description, price, type } = newProduct
     console.log(products);
+    const email = user.email;
+    const card = { image, email, price, name, type }
 
-    // const product = products.find(product => product._id === _id)
-    // console.log(product)
+    const handleAddCart = () => {
+        fetch("http://localhost:5000/addTocart", {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(card),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                alert("post add done ");
+            });
+    }
+
+
     return (
         <div>
             <div className="container mx-auto mt-10 mb-10">
@@ -22,7 +41,7 @@ const ProductDetails = () => {
                             <p className="text-5xl font-semibold">Type : {type}</p>
                         </div>
                         <div className="lg:ml-60 mt-10">
-                            <button className="btn btn-accent">Add To Cart</button>
+                            <button onClick={handleAddCart} className="btn btn-accent">Add To Cart</button>
                         </div>
                     </div>
                 </div>

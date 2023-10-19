@@ -33,11 +33,11 @@ const router = createBrowserRouter([
                 element: <ProductDetails></ProductDetails>,
                 loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
             },
-            // {
-            //     path: "/updateproduct/:id",
-            //     element: <UpdateProduct></UpdateProduct>,
-            //     loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
-            // },
+            {
+                path: "/updateproduct/:id",
+                element: <UpdateProduct></UpdateProduct>,
+                loader: ({ params }) => fetch(`http://localhost:5000/cars/${params.id}`)
+            },
             {
                 path: "/brand/:brandName",
                 element: <BrandItems></BrandItems>,
