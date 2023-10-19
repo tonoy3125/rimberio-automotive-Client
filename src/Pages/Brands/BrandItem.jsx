@@ -1,8 +1,10 @@
 /* eslint-disable react/prop-types */
 
+import { Link } from "react-router-dom";
+
 
 const BrandItem = ({ product }) => {
-    const { image, rating, price, type, brandName, name } = product
+    const { _id, image, rating, price, type, brandName, name } = product
 
     const stars = [];
     for (let i = 0; i < 5; i++) {
@@ -28,8 +30,8 @@ const BrandItem = ({ product }) => {
                         <div className="star-rating text-rose-700">{stars}</div>
                     </div>
                     <div className="card-actions justify-center mt-3">
-                        <button className="text-white rounded btn-sm btn-accent">Details</button>
-                        <button className="text-white rounded btn-sm btn-accent">Update</button>
+                        <Link to={`/productdetails/${_id}`}><button className="text-white rounded btn-sm btn-accent">Details</button></Link>
+                        <Link to={`/updateproduct/${_id}`}> <button className="text-white rounded btn-sm btn-accent">Update</button></Link>
                     </div>
                 </div>
             </div>
