@@ -9,7 +9,7 @@ import MyCart from "../Pages/MyCart/MyCart";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Register/Register";
 import BrandItems from "../Pages/Brands/BrandItems";
-// import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
+import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 
 
@@ -34,9 +34,9 @@ const router = createBrowserRouter([
                 loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
             },
             // {
-            //     path: "/updateproduct/:brandName/:id",
+            //     path: "/updateproduct/:id",
             //     element: <UpdateProduct></UpdateProduct>,
-            //     loader: ({ params }) => fetch(`http://localhost:5000/product/${params.brandName}/${params.id}`)
+            //     loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
             // },
             {
                 path: "/brand/:brandName",

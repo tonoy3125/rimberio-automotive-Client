@@ -6,6 +6,7 @@ const UpdateProduct = () => {
 
     const product = useLoaderData()
     const { _id, image, rating, price, description, type, brandName, name } = product
+    
 
 
     const handleUpdetedProduct = event => {
@@ -23,7 +24,7 @@ const UpdateProduct = () => {
         console.log(newProduct)
 
 
-        fetch(`http://localhost:5000/product/${_id}`, {
+        fetch(`http://localhost:5000/products/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
