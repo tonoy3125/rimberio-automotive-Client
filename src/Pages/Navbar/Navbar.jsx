@@ -8,7 +8,7 @@ import { AuthContext } from "../../Providers/AuthProvider";
 
 const Navbar = () => {
 
-    
+
 
     const { user, logOut, loading } = useContext(AuthContext)
     console.log(loading)
@@ -43,6 +43,9 @@ const Navbar = () => {
                             <li className="text-black text-lg hover:text-[#46d993] font-bold"><NavLink className={({ isActive, isPending }) =>
                                 isPending ? "pending" : isActive ? "font-bold text-black underline" : ""
                             } to="/mycart">My Cart</NavLink></li>
+                            <li className="text-black text-lg hover:text-[#46d993] font-bold"><NavLink className={({ isActive, isPending }) =>
+                                isPending ? "pending" : isActive ? "font-bold text-black underline" : ""
+                            } to="/login">Login</NavLink></li>
 
                         </ul>
                     </div>
@@ -63,13 +66,16 @@ const Navbar = () => {
                         <li className="text-white text-lg hover:text-[#46d993] font-medium"><NavLink className={({ isActive, isPending }) =>
                             isPending ? "pending" : isActive ? "font-bold text-gray-50 underline" : ""
                         } to="/mycart">My Cart</NavLink></li>
+                        <li className="text-white text-lg hover:text-[#46d993] font-medium"><NavLink className={({ isActive, isPending }) =>
+                            isPending ? "pending" : isActive ? "font-bold text-gray-50 underline" : ""
+                        } to="/login">Login</NavLink></li>
 
 
                     </ul>
                 </div>
                 <div className="navbar-end flex items-center gap-5">
                     <div>
-                        
+
                     </div>
                     {
                         user ? <div className="dropdown dropdown-end">
@@ -91,7 +97,13 @@ const Navbar = () => {
                             </ul>
                         </div>
                             :
-                            <Link to="/login"> <button className="px-5 py-3 rounded-lg bg-[#DE3163] text-white">Login</button></Link>
+                            <Link to="/login">
+                                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <img src="https://i.ibb.co/WsLGC0q/user.png" />
+                                    </div>
+                                </label>
+                            </Link>
                     }
                 </div>
             </div>

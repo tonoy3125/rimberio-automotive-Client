@@ -22,10 +22,7 @@ const Login = () => {
         const password = e.target.password.value;
         console.log(email, password)
 
-        // if (password.length < 6) {
-        //     swal("Password must be at least 6 characters");
-        //     return
-        // }
+        
 
         if (!/^.{6,}$/.test(password)) {
             toast.error("Password must be at least 6 characters");
