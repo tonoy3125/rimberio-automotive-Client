@@ -2,7 +2,7 @@
 /* eslint-disable react/prop-types */
 
 import Swal from "sweetalert2";
-const Cartdetails = ({ cart, carts, setcarts }) => {
+const Cartdetails = ({ cart, carts, setCarts }) => {
     const { _id, image, email, price, name, type } = cart
 
     const handleDelete = _id => {
@@ -17,7 +17,7 @@ const Cartdetails = ({ cart, carts, setcarts }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/addTocart/${_id}`, {
+                fetch(`https://rimberio-automotive-server-l9bwyv2p0.vercel.app/addTocart/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -30,7 +30,7 @@ const Cartdetails = ({ cart, carts, setcarts }) => {
                                 'success'
                             )
                             const remaining = carts.filter(cot => cot._id !== _id)
-                            setcarts(remaining)
+                            setCarts(remaining)
                         }
                     })
             }

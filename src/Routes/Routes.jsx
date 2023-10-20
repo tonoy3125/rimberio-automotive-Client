@@ -22,7 +22,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/brandname')
+                loader: () => fetch('https://rimberio-automotive-server-l9bwyv2p0.vercel.app/brandname')
             },
             {
                 path: "/addproduct",
@@ -31,17 +31,17 @@ const router = createBrowserRouter([
             {
                 path: "/productdetails/:id",
                 element: <ProductDetails></ProductDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://rimberio-automotive-server-l9bwyv2p0.vercel.app/products/${params.id}`)
             },
             {
                 path: "/updateproduct/:id",
                 element: <UpdateProduct></UpdateProduct>,
-                loader: ({ params }) => fetch(`http://localhost:5000/cars/${params.id}`)
+                loader: ({ params }) => fetch(`https://rimberio-automotive-server-l9bwyv2p0.vercel.app/cars/${params.id}`)
             },
             {
                 path: "/brand/:brandName",
                 element: <BrandItems></BrandItems>,
-                loader: ({ params }) => fetch(`http://localhost:5000/product/${params.brandName}`),
+                loader: ({ params }) => fetch(`https://rimberio-automotive-server-l9bwyv2p0.vercel.app/product/${params.brandName}`),
             },
             {
                 path: "/mycart",

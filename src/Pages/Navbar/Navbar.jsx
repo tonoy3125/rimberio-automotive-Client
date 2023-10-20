@@ -4,10 +4,15 @@ import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
 
 
+
+
 const Navbar = () => {
+
+    
 
     const { user, logOut, loading } = useContext(AuthContext)
     console.log(loading)
+
 
     const handleLogOut = () => {
         logOut()
@@ -62,7 +67,10 @@ const Navbar = () => {
 
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end flex items-center gap-5">
+                    <div>
+                        
+                    </div>
                     {
                         user ? <div className="dropdown dropdown-end">
                             <label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip" >

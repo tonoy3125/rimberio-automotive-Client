@@ -3,6 +3,7 @@ import { useLoaderData } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import { useContext } from "react";
 import { AuthContext } from "../../Providers/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 
 
 const ProductDetails = () => {
@@ -15,7 +16,7 @@ const ProductDetails = () => {
     const card = { image, email, price, name, type }
 
     const handleAddCart = () => {
-        fetch("http://localhost:5000/addTocart", {
+        fetch("https://rimberio-automotive-server-l9bwyv2p0.vercel.app/addTocart", {
             method: "POST",
             headers: {
                 "content-type": "application/json",
@@ -25,7 +26,7 @@ const ProductDetails = () => {
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
-                alert("post add done ");
+                toast.success("Your product has been added to the cart.");
             });
     }
 
@@ -50,6 +51,7 @@ const ProductDetails = () => {
 
             </div>
             <Footer></Footer>
+            <Toaster/>
         </div>
     );
 };

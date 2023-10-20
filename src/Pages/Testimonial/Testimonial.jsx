@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { MdVerified } from 'react-icons/md';
 import AOS from 'aos';
 import 'aos/dist/aos.css'
@@ -21,7 +22,7 @@ const Testimonial = () => {
                         <div data-aos="fade-down"
                             data-aos-easing="linear"
                             data-aos-duration="3000" className=" cursor-pointer shadow-2xl shadow-slate-300 border rounded-xl bg-[#fff] ">
-                            <p className=" text-base text-black font-bold capitalize px-6 pt-16 "> Impeccable service, quality cars. <span className='text-purple-600 font-extrabold'>Rimberio Automotive</span> exceeded expectations. Found my dream car effortlessly. Highly recommend! </p>
+                            <p className=" text-base text-black font-bold capitalize px-6 pt-16 "> "Impeccable service, quality cars. <span className='text-purple-600 font-extrabold'>Rimberio Automotive</span> exceeded expectations. Found my dream car effortlessly. Highly recommend!" </p>
                             <div className="flex items-center justify-center mt-20 mb-14">
                                 <img className="object-cover w-10 h-10 rounded-full ring-4 ring-gray-300 mr-5" src='https://i.ibb.co/HLyYS6c/young-woman-choosing-car-car-showroom.jpg' alt="" />
                                 <h1 className=" text-xl font-semibold text-[#a3a3a6] capitalize mr-1 ">Jessica Mann</h1>

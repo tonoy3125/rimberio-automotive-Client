@@ -11,7 +11,7 @@ const MyCart = () => {
     console.log(email, user)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/addTocart/${email}`)
+        fetch(`https://rimberio-automotive-server-l9bwyv2p0.vercel.app/addTocart/${email}`)
             .then(res => res.json())
             .then(data => {
                 setCarts(data)
