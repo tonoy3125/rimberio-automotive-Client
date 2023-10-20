@@ -11,6 +11,7 @@ import Register from "../Pages/Register/Register";
 import BrandItems from "../Pages/Brands/BrandItems";
 import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -26,16 +27,16 @@ const router = createBrowserRouter([
             },
             {
                 path: "/addproduct",
-                element: <AddProduct></AddProduct>
+                element: <PrivateRoute><AddProduct></AddProduct></PrivateRoute>
             },
             {
                 path: "/productdetails/:id",
-                element: <ProductDetails></ProductDetails>,
+                element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://rimberio-automotive-server-l9bwyv2p0.vercel.app/products/${params.id}`)
             },
             {
                 path: "/updateproduct/:id",
-                element: <UpdateProduct></UpdateProduct>,
+                element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
                 loader: ({ params }) => fetch(`https://rimberio-automotive-server-l9bwyv2p0.vercel.app/cars/${params.id}`)
             },
             {
@@ -45,7 +46,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/mycart",
-                element: <MyCart></MyCart>
+                element: <PrivateRoute><MyCart></MyCart></PrivateRoute>
             },
             {
                 path: "/login",

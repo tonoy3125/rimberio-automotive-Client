@@ -2,8 +2,9 @@
 import { useLoaderData } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import { useContext } from "react";
-import { AuthContext } from "../../Providers/AuthProvider";
+
 import toast, { Toaster } from "react-hot-toast";
+import { AuthContext } from "../../Providers/Authprovider";
 
 
 const ProductDetails = () => {
