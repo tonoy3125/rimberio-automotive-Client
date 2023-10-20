@@ -45,7 +45,7 @@ const UpdateProduct = () => {
         <div className="bg-[#EAF2F8] pt-20">
             <div className="bg-[#D4E6F1] container mx-auto border pt-10 px-1 lg:p-16 rounded-md shadow">
                 <h1 className="text-4xl text-center font-bold text-[#374151] mb-8">Update A Product</h1>
-                <p className="text-center text-base font-medium text-[#1B1A1AB3]">Discover a curated selection of top-tier vehicles at our car brand shop. From sleek sedans to rugged SUVs, we offer a range of models known for their quality, performance, and style. Each vehicle is meticulously inspected and maintained to ensure you drive away with confidence. Explore our showroom today and find the perfect car that suits your lifestyle and preferences.</p>
+                <p className="text-center text-base font-medium text-[#1B1A1AB3] mb-2">Discover a curated selection of top-tier vehicles at our car brand shop. From sleek sedans to rugged SUVs, we offer a range of models known for their quality, performance, and style. Each vehicle is meticulously inspected and maintained to ensure you drive away with confidence. Explore our showroom today and find the perfect car that suits your lifestyle and preferences.</p>
                 <form onSubmit={handleUpdetedProduct}>
                     <div className="flex flex-col md:flex-row items-center gap-6 mb-6 ">
                         <div className="w-full md:w-1/2">
@@ -88,7 +88,7 @@ const UpdateProduct = () => {
                         <h2 className=" text-base md:text-xl font-semibold text-[#1B1A1ACC] mb-4">Image</h2>
                         <input className="pt-5 pb-5 pl-2 md:p-5 w-full shadow-md  text-base font-normal text-[#1B1A1A99] rounded" type="text" name="image" defaultValue={image} placeholder="Enter Price Here" id="" />
                     </div>
-                    <input type="submit" value="Add Product" className="btn btn-block bg-[#196F3D] text-lg text-[#fff] hover:bg-[#154360] " />
+                    <input type="submit" value="Update Product" className="btn btn-block bg-[#196F3D] text-lg text-[#fff] hover:bg-[#154360] " />
                 </form>
             </div>
             <Footer></Footer>

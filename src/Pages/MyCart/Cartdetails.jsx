@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 
 import Swal from "sweetalert2";
 const Cartdetails = ({ cart, carts, setcarts }) => {

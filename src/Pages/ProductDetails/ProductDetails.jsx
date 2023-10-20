@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import { useLoaderData } from "react-router-dom";
 import Footer from "../Footer/Footer";
 import { useContext } from "react";
