@@ -17,7 +17,7 @@ const Cartdetails = ({ cart, carts, setCarts }) => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://rimberio-automotive-server-l9bwyv2p0.vercel.app/addTocart/${_id}`, {
+                fetch(`https://rimberio-automotive-server.vercel.app/addTocart/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

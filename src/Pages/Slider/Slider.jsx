@@ -59,7 +59,6 @@ const Slider = ({ singlepic }) => {
                             </div>
                         </div>
                     </div>
-
                 </SwiperSlide>
             </Swiper>
         </div>

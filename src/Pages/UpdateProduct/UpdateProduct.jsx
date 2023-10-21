@@ -24,7 +24,7 @@ const UpdateProduct = () => {
         console.log(newProduct)
 
 
-        fetch(`https://rimberio-automotive-server-l9bwyv2p0.vercel.app/product/${_id}`, {
+        fetch(`https://rimberio-automotive-server.vercel.app/product/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

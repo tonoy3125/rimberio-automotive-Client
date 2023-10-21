@@ -17,7 +17,7 @@ const ProductDetails = () => {
     const card = { image, email, price, name, type }
 
     const handleAddCart = () => {
-        fetch("https://rimberio-automotive-server-l9bwyv2p0.vercel.app/addTocart", {
+        fetch("https://rimberio-automotive-server.vercel.app/addTocart", {
             method: "POST",
             headers: {
                 "content-type": "application/json",

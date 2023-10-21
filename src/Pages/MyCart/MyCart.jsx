@@ -1,7 +1,8 @@
 import { useContext, useEffect, useState } from "react";
-import { AuthContext } from "../../Providers/AuthProvider";
+
 import Cartdetails from "./Cartdetails";
 import Footer from "../Footer/Footer";
+import { AuthContext } from "../../Providers/Authprovider";
 
 
 const MyCart = () => {
@@ -11,7 +12,7 @@ const MyCart = () => {
     console.log(email, user)
 
     useEffect(() => {
-        fetch(`https://rimberio-automotive-server-l9bwyv2p0.vercel.app/addTocart/${email}`)
+        fetch(`https://rimberio-automotive-server.vercel.app/addTocart/${email}`)
             .then(res => res.json())
             .then(data => {
                 setCarts(data)

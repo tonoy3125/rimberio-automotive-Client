@@ -11,7 +11,7 @@ const BrandItems = () => {
     const [slider, setSlider] = useState([])
 
     useEffect(() => {
-        fetch('https://rimberio-automotive-server-l9bwyv2p0.vercel.app/slider')
+        fetch('https://rimberio-automotive-server.vercel.app/slider')
             .then(res => res.json())
             .then(data => setSlider(data))
     }, [])

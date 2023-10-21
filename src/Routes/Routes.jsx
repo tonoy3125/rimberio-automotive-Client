@@ -23,7 +23,7 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>,
-                loader: () => fetch('https://rimberio-automotive-server-l9bwyv2p0.vercel.app/brandname')
+                loader: () => fetch('https://rimberio-automotive-server.vercel.app/brandname')
             },
             {
                 path: "/addproduct",
@@ -32,17 +32,17 @@ const router = createBrowserRouter([
             {
                 path: "/productdetails/:id",
                 element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-                loader: ({ params }) => fetch(`https://rimberio-automotive-server-l9bwyv2p0.vercel.app/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://rimberio-automotive-server.vercel.app/products/${params.id}`)
             },
             {
                 path: "/updateproduct/:id",
                 element: <PrivateRoute><UpdateProduct></UpdateProduct></PrivateRoute>,
-                loader: ({ params }) => fetch(`https://rimberio-automotive-server-l9bwyv2p0.vercel.app/cars/${params.id}`)
+                loader: ({ params }) => fetch(`https://rimberio-automotive-server.vercel.app/cars/${params.id}`)
             },
             {
                 path: "/brand/:brandName",
                 element: <BrandItems></BrandItems>,
-                loader: ({ params }) => fetch(`https://rimberio-automotive-server-l9bwyv2p0.vercel.app/product/${params.brandName}`),
+                loader: ({ params }) => fetch(`https://rimberio-automotive-server.vercel.app/product/${params.brandName}`),
             },
             {
                 path: "/mycart",

@@ -18,7 +18,7 @@ const AddProduct = () => {
         console.log(newProduct)
 
 
-        fetch('https://rimberio-automotive-server-l9bwyv2p0.vercel.app/product', {
+        fetch('https://rimberio-automotive-server.vercel.app/product', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
