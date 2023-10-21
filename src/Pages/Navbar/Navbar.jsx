@@ -9,7 +9,7 @@ import { AuthContext } from "../../Providers/Authprovider";
 
 const Navbar = () => {
 
-    const [theme, setTheme] = useState(null);
+    
 
     const { user, logOut, loading } = useContext(AuthContext)
     console.log(loading)
@@ -26,12 +26,15 @@ const Navbar = () => {
     }
 
 
-    
+    const [theme, setTheme] = useState(null);
+    console.log(theme)
     if (theme) {
         const changeTheme = document.getElementById("theme");
         changeTheme.removeAttribute("data-theme", "light");
+        changeTheme.setAttribute("data-theme", "dark");
     } else {
         const changeTheme = document.getElementById("theme");
+        changeTheme.removeAttribute("data-theme", "dark");
         changeTheme.setAttribute("data-theme", "light");
     }
 
