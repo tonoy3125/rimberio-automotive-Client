@@ -21,7 +21,7 @@
   - Firebase Authentication
 
 - *Build Tools:*
-  - [Vite](https://vitejs.dev/
+  - [Vite](https://vitejs.dev/)
 
 # Project Features
 
